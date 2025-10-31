@@ -1,3 +1,7 @@
+$primry-color: #15bd90;
+$secondary-color: #373f6f;
+$light: #fff;
+
 
 * {
   box-sizing: border-box;
@@ -26,7 +30,7 @@ body {
 }
 
 .active {
-  background: #15bd90;
+  background: $primry-color;
   border-radius: 3px;
 }
 
@@ -43,9 +47,9 @@ main {
   display: inline-block;
   border-radius: 50px;
   padding: 14px 28px;
-  color: #15bd90;
+  color: $primry-color;
   text-transform: uppercase;
-  border: 1px solid #15bd90;
+  border: 1px solid $primry-color;
   font-size: 1.4rem;
   transition: all 0.3s;
   background: transparent;
@@ -53,8 +57,8 @@ main {
 }
 
 .btn:hover {
-  background: #15bd90;
-  color: #fff;
+  background: $primry-color;
+  color: $light;
 }
 
 p {
@@ -74,8 +78,35 @@ a {
 .hero {
   position: relative;
   padding: 100px 0;
-  color: #fff;
+  color: $light;
+
+  video {
+    width: 100%;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.4);
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  .btn {
+    margin-top: 30px;
+  }
+
+  hr {
+    border: 0;
+    border-top: 4px solid $primry-color;
+    margin-left: 0;
+    margin-top: 10px;
+    width: 30px;
+  }
 }
+
 .hero:after {
   position: absolute;
   content: "";
@@ -89,30 +120,6 @@ a {
   transform: skew(0deg, -7deg);
   transform-origin: left bottom;
 }
-.hero video {
-  width: 100%;
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.4);
-}
-.hero .hero-caption {
-  padding: 20px 20px;
-}
-.hero .title {
-  font-size: 28px;
-}
-.hero .subtitle {
-  font-size: 18px;
-  font-weight: 400;
-}
-.hero .btn {
-  margin-top: 30px;
-}
-.hero hr {
-  border: 0;
-  border-top: 4px solid #15bd90;
-  margin-left: 0;
-  margin-top: 10px;
-  width: 30px;
-}
 
 @media only screen and (min-width: 992px) {
   .hero .hero-container {
@@ -120,11 +127,13 @@ a {
     align-items: center;
     justify-content: flex-end;
     position: relative;
-  }
-  .hero video {
-    width: 65%;
+
+    video {
+      width: 65%;
+    }
   }
 }
+
 header {
   background: rgba(53, 63, 111, 0.7);
   text-align: center;
@@ -133,123 +142,156 @@ header {
   width: 100%;
   z-index: 1;
   box-shadow: 0 3px 2px rgba(0, 0, 0, 0.4);
+
+  .logo-container {
+    padding: 8px;
+  }
+
+  img {
+    width: 50px;
+  }
+
+  nav {
+    background: $secondary-color;
+    padding: 10px;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    li {
+      display: inline-block;
+
+      a {
+        display: inline-block;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        color: $light;
+      }
+    }
+
+    img {
+      width: 50px;
+    }
+  }
 }
-header .logo-container {
-  padding: 8px;
-}
-header img {
-  width: 50px;
-}
-header nav {
-  background: #373f6f;
-  padding: 10px;
-}
-header nav ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-header nav li {
-  display: inline-block;
-}
-header nav li a {
-  display: inline-block;
-  padding: 5px 10px;
-  text-transform: uppercase;
-  color: #fff;
-}
-header nav img {
-  width: 50px;
-}
+
 
 @media only screen and (min-width: 768px) {
   header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    nav {
+      background: transparent;
+    }
   }
-  header nav {
-    background: transparent;
-  }
+
+
 }
+
 @media only screen and (min-width: 992px) {
   header nav li a {
     transition: background 0.3s;
   }
-  header nav li a:hover {
-    background: #373f6f;
+
+  nav li a:hover {
+    background: $secondary-color;
     border-radius: 3px;
   }
+
   header nav li a:focus {
-    background: #15bd90;
+    background: $primry-color;
     border-radius: 3px;
   }
 }
+
 @media only screen and (max-width: 768px) {
   header nav {
     margin: 0 -15px;
+
+    nav li a {
+      color: $light;
+    }
   }
-  header nav li a {
-    color: #fff;
-  }
+
+
 }
+
 .features {
   padding: 120px 0;
   text-align: center;
 }
 
 #contact-form {
-  background-color: #373f6f;
+  background-color: $secondary-color;
   background-image: url("../../src/images/world.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding: 30px 0;
-  color: #fff;
-}
-#contact-form hr {
-  border: 0;
-  border-top: 4px solid #fff;
-  margin-left: 0;
-  margin-top: 10px;
-  width: 30px;
-}
-#contact-form .submit {
-  text-align: center;
-}
-#contact-form .form-group {
-  padding: 0 0 10px;
-}
-#contact-form input, #contact-form textarea, #contact-form select {
-  display: block;
-  width: 100%;
-  border: 1px solid #D8D8D8;
-}
-#contact-form label {
-  display: block;
-  padding-bottom: 5px;
-}
-#contact-form input {
-  height: 40px;
-  border-radius: 3px;
-  padding: 0 15px;
-}
-#contact-form textarea {
-  border-radius: 3px;
-  padding: 15px;
-}
-#contact-form form {
-  margin: 0 -15px;
-}
-#contact-form .form-wrapper .message, #contact-form .form-wrapper .info {
-  flex: 1;
-  padding: 15px;
-}
-#contact-form .form-wrapper .message .form-group {
-  height: 100%;
-}
-#contact-form .form-wrapper .message textarea {
-  height: calc(100% - 23px);
+  color: $light;
+
+  hr {
+    border: 0;
+    border-top: 4px solid $light;
+    margin-left: 0;
+    margin-top: 10px;
+    width: 30px;
+  }
+
+  .submit {
+    text-align: center;
+  }
+
+  .form-group {
+    padding: 0 0 10px;
+  }
+
+  input,
+  textarea,
+  select {
+    display: block;
+    width: 100%;
+    border: 1px solid #D8D8D8;
+  }
+
+  label {
+    display: block;
+    padding-bottom: 5px;
+  }
+
+  input {
+    height: 40px;
+    border-radius: 3px;
+    padding: 0 15px;
+  }
+
+  textarea {
+    border-radius: 3px;
+    padding: 15px;
+  }
+
+  form {
+    margin: 0 -15px;
+  }
+
+  .form-wrapper .message,
+  .form-wrapper .info {
+    flex: 1;
+    padding: 15px;
+  }
+
+  .form-wrapper .message .form-group {
+    height: 100%;
+  }
+
+  .form-wrapper .message textarea {
+    height: calc(100% - 23px);
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -257,17 +299,21 @@ header nav img {
     display: flex;
   }
 }
+
 footer {
   text-align: center;
   padding: 15px;
-}
-footer.main img {
-  width: 24px;
-}
-footer.main a {
-  display: inline-block;
-  padding: 5px 10px;
-}
-footer.main p {
-  font-size: 1.2rem;
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  a {
+    display: inline-block;
+    padding: 5px 10px;
+  }
+
+  img {
+    width: 24px;
+  }
 }
