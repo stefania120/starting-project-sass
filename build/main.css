@@ -170,15 +170,15 @@ header nav img {
   }
 }
 @media only screen and (min-width: 992px) {
-  header nav li a {
+  header nav a {
     transition: background 0.3s;
   }
-  nav li a:hover {
-    background: #373f6f;
+  header nav a:focus {
+    background: #15bd90;
     border-radius: 3px;
   }
-  header nav li a:focus {
-    background: #15bd90;
+  header nav a:hover {
+    background: #373f6f;
     border-radius: 3px;
   }
 }
@@ -186,7 +186,7 @@ header nav img {
   header nav {
     margin: 0 -15px;
   }
-  header nav nav li a {
+  header nav a {
     color: #fff;
   }
 }
