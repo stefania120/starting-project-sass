@@ -1,37 +1,13 @@
 @import "variables";
 @import "mixins";
 @import "functions";
+
 @import "hero";
 @import "media-queries";
 @import "commons";
-@import "main";
 @import "buttons";
-@import "thypography";
+@import "typography";
 @import "header";
 @import "contact-form";
 @import "footer";
-
-.features {
-  padding: 120px 0;
-  text-align: center;
-  .item{
-    background: $primary-color;
-    color: $light;
-    padding: 20px;
-    width: calc-perc(250, 1060);
-  }
-}
-
-.box-wrapper {
-  @include align-item(flex-start, center);
-  background: $primary-color;
-  width: 400px;
-  height: 300px;
-  margin: 40px auto;
-
-  .box {
-    width: 60px;
-    height: 30px;
-    background: $secondary-color;
-  }
-}
+@import "features";
