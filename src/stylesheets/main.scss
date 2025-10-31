@@ -2,6 +2,20 @@ $primary-color: #15bd90;
 $secondary-color: #373f6f;
 $light: #fff;
 
+@mixin title-line($color, $width) {
+  border: 0;
+  border-top: 4px solid $color;
+  margin-left: 0;
+  margin-top: 10px;
+  width: $width;
+}
+
+@mixin align-item($x, $y) {
+  display: flex;
+  justify-content: $x;
+  align-items: $y;
+}
+
 
 * {
   box-sizing: border-box;
@@ -101,11 +115,7 @@ a {
   }
 
   hr {
-    border: 0;
-    border-top: 4px solid $primary-color;
-    margin-left: 0;
-    margin-top: 10px;
-    width: 30px;
+    @include title-line($primary-color, 30px);
   }
 
   &:after {
@@ -126,7 +136,7 @@ a {
 
 
 @media only screen and (min-width: 992px) {
-  &hero &hero-container {
+  .hero-container {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -242,11 +252,7 @@ header {
   color: $light;
 
   hr {
-    border: 0;
-    border-top: 4px solid $light;
-    margin-left: 0;
-    margin-top: 10px;
-    width: 30px;
+    @include title-line($light, 60px);
   }
 
   .submit {
@@ -328,5 +334,19 @@ footer {
 
   img {
     width: 24px;
+  }
+}
+
+.box-wrapper {
+  @include align-item(flex-start, center);
+  background: $primary-color;
+  width: 400px;
+  height: 300px;
+  margin: 40px auto;
+
+  .box {
+    width: 60px;
+    height: 30px;
+    background: $secondary-color;
   }
 }

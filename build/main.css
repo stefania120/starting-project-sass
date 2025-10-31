@@ -50,7 +50,6 @@ main {
   background: transparent;
   cursor: pointer;
 }
-
 .btn:hover {
   background: #15bd90;
   color: #fff;
@@ -96,7 +95,6 @@ a {
   margin-top: 10px;
   width: 30px;
 }
-
 .hero:after {
   position: absolute;
   content: "";
@@ -112,13 +110,13 @@ a {
 }
 
 @media only screen and (min-width: 992px) {
-  .hero .hero-container {
+  .hero-container {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     position: relative;
   }
-  .hero .hero-container video {
+  .hero-container video {
     width: 65%;
   }
 }
@@ -160,12 +158,12 @@ header nav img {
 }
 
 @media only screen and (min-width: 768px) {
-  header .container {
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  header .container nav {
+  header nav {
     background: transparent;
   }
 }
@@ -209,7 +207,7 @@ header nav img {
   border-top: 4px solid #fff;
   margin-left: 0;
   margin-top: 10px;
-  width: 30px;
+  width: 60px;
 }
 #contact-form .submit {
   text-align: center;
@@ -240,16 +238,16 @@ header nav img {
 #contact-form form {
   margin: 0 -15px;
 }
-#contact-form .form-wrapper .message,
-#contact-form .form-wrapper .info {
-  flex: 1;
-  padding: 15px;
-}
 #contact-form .form-wrapper .message .form-group {
   height: 100%;
 }
 #contact-form .form-wrapper .message textarea {
   height: calc(100% - 23px);
+}
+#contact-form .form-wrapper .message,
+#contact-form .form-wrapper .info {
+  flex: 1;
+  padding: 15px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -270,4 +268,19 @@ footer a {
 }
 footer img {
   width: 24px;
+}
+
+.box-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #15bd90;
+  width: 400px;
+  height: 300px;
+  margin: 40px auto;
+}
+.box-wrapper .box {
+  width: 60px;
+  height: 30px;
+  background: #373f6f;
 }/*# sourceMappingURL=main.css.map */
