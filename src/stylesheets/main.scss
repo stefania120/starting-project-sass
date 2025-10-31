@@ -1,0 +1,273 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.container {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.active {
+  background: #15bd90;
+  border-radius: 3px;
+}
+
+img {
+  width: 100%;
+}
+
+main {
+  min-height: calc(100vh - 138.5px - 104px);
+  padding-top: 68.5px;
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 50px;
+  padding: 14px 28px;
+  color: #15bd90;
+  text-transform: uppercase;
+  border: 1px solid #15bd90;
+  font-size: 1.4rem;
+  transition: all 0.3s;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #15bd90;
+  color: #fff;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #000;
+}
+
+.title {
+  font-size: 2.2rem;
+}
+
+.hero {
+  position: relative;
+  padding: 100px 0;
+  color: #fff;
+}
+.hero:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 700px;
+  background: linear-gradient(to right, #353f6f, rgba(189, 27, 27, 0.74)), url("../../src/images/iphone-bg.jpg") no-repeat center fixed;
+  background-size: cover;
+  z-index: -1000;
+  top: -100px;
+  left: 0;
+  transform: skew(0deg, -7deg);
+  transform-origin: left bottom;
+}
+.hero video {
+  width: 100%;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.4);
+}
+.hero .hero-caption {
+  padding: 20px 20px;
+}
+.hero .title {
+  font-size: 28px;
+}
+.hero .subtitle {
+  font-size: 18px;
+  font-weight: 400;
+}
+.hero .btn {
+  margin-top: 30px;
+}
+.hero hr {
+  border: 0;
+  border-top: 4px solid #15bd90;
+  margin-left: 0;
+  margin-top: 10px;
+  width: 30px;
+}
+
+@media only screen and (min-width: 992px) {
+  .hero .hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+  }
+  .hero video {
+    width: 65%;
+  }
+}
+header {
+  background: rgba(53, 63, 111, 0.7);
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.4);
+}
+header .logo-container {
+  padding: 8px;
+}
+header img {
+  width: 50px;
+}
+header nav {
+  background: #373f6f;
+  padding: 10px;
+}
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+header nav li {
+  display: inline-block;
+}
+header nav li a {
+  display: inline-block;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  color: #fff;
+}
+header nav img {
+  width: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav {
+    background: transparent;
+  }
+}
+@media only screen and (min-width: 992px) {
+  header nav li a {
+    transition: background 0.3s;
+  }
+  header nav li a:hover {
+    background: #373f6f;
+    border-radius: 3px;
+  }
+  header nav li a:focus {
+    background: #15bd90;
+    border-radius: 3px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  header nav {
+    margin: 0 -15px;
+  }
+  header nav li a {
+    color: #fff;
+  }
+}
+.features {
+  padding: 120px 0;
+  text-align: center;
+}
+
+#contact-form {
+  background-color: #373f6f;
+  background-image: url("../../src/images/world.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 30px 0;
+  color: #fff;
+}
+#contact-form hr {
+  border: 0;
+  border-top: 4px solid #fff;
+  margin-left: 0;
+  margin-top: 10px;
+  width: 30px;
+}
+#contact-form .submit {
+  text-align: center;
+}
+#contact-form .form-group {
+  padding: 0 0 10px;
+}
+#contact-form input, #contact-form textarea, #contact-form select {
+  display: block;
+  width: 100%;
+  border: 1px solid #D8D8D8;
+}
+#contact-form label {
+  display: block;
+  padding-bottom: 5px;
+}
+#contact-form input {
+  height: 40px;
+  border-radius: 3px;
+  padding: 0 15px;
+}
+#contact-form textarea {
+  border-radius: 3px;
+  padding: 15px;
+}
+#contact-form form {
+  margin: 0 -15px;
+}
+#contact-form .form-wrapper .message, #contact-form .form-wrapper .info {
+  flex: 1;
+  padding: 15px;
+}
+#contact-form .form-wrapper .message .form-group {
+  height: 100%;
+}
+#contact-form .form-wrapper .message textarea {
+  height: calc(100% - 23px);
+}
+
+@media only screen and (min-width: 768px) {
+  .form-wrapper {
+    display: flex;
+  }
+}
+footer {
+  text-align: center;
+  padding: 15px;
+}
+footer.main img {
+  width: 24px;
+}
+footer.main a {
+  display: inline-block;
+  padding: 5px 10px;
+}
+footer.main p {
+  font-size: 1.2rem;
+}
