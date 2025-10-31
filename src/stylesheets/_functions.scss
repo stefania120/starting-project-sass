@@ -1,0 +1,3 @@
+@function calc-perc($target, $container) {
+  @return calc($target / $container) * 100%;
+}
