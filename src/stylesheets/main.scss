@@ -16,6 +16,9 @@ $light: #fff;
   align-items: $y;
 }
 
+@function calc-perc($target, $container) {
+  @return calc($target / $container) * 100%;
+}
 
 * {
   box-sizing: border-box;
@@ -240,6 +243,12 @@ header {
 .features {
   padding: 120px 0;
   text-align: center;
+  .item{
+    background: $primary-color;
+    color: $light;
+    padding: 20px;
+    width: calc-perc(250, 1060);
+  }
 }
 
 #contact-form {

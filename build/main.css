@@ -192,6 +192,12 @@ header nav img {
   padding: 120px 0;
   text-align: center;
 }
+.features .item {
+  background: #15bd90;
+  color: #fff;
+  padding: 20px;
+  width: 23.5849056604%;
+}
 
 #contact-form {
   background-color: #373f6f;
