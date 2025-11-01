@@ -1,55 +1,12 @@
-@media only screen and (min-width: 992px) {
-  .hero-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    position: relative;
-
-    video {
-      width: 65%;
-    }
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    nav {
-      background: transparent;
-    }
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  header {
-    nav {
-      a {
-        transition: background 0.3s;
-
-        &:focus {
-          background: $primary-color;
-          border-radius: 3px;
-        }
-
-        &:hover {
-          background: $secondary-color;
-          border-radius: 3px;
-        }
-      }
-    }
-  }
-}
-
 @media only screen and (max-width: 768px) {
   header {
     nav {
       margin: 0 -15px;
 
-      a {
-        color: $light;
+      li {
+        a {
+          color: #fff;
+        }
       }
     }
   }
@@ -61,3 +18,51 @@
   }
 }
 
+@media only screen and (min-width: 992px) {
+  .hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+  }
+
+  .hero video {
+    width: 65%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav {
+      background: transparent;
+    }
+  }
+
+
+}
+
+@media only screen and (min-width: 992px) {
+  header {
+    nav {
+      li {
+        a {
+          transition: background 0.3s;
+        }
+        a:hover {
+          background: #373f6f;
+          border-radius: 3px;
+        }
+        a:focus {
+          background: #15bd90;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+}
