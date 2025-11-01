@@ -1,14 +1,3 @@
-@import "variables";
-@import "mixins";
-@import "functions";
-
-@import "hero";
-@import "media-queries";
-@import "commons";
-@import "buttons";
-@import "typography";
-@import "header";
-@import "contact-form";
-@import "footer";
-@import "features";
-@import "nav";
+@import "abstracts/base";
+@import "modules/base";
+@import "core/base";

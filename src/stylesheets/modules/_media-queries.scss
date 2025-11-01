@@ -1,8 +1,7 @@
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: map-get($breakpoints, 'sm')) {
   header {
     nav {
       margin: 0 -15px;
-
       li {
         a {
           color: #fff;
@@ -12,13 +11,13 @@
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: map-get($breakpoints, 'sm')) {
   .form-wrapper {
     display: flex;
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: map-get($breakpoints, 'md')) {
   .hero-container {
     display: flex;
     align-items: center;
@@ -31,7 +30,7 @@
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: map-get($breakpoints, 'sm')) {
   header {
     .container {
       display: flex;
@@ -43,11 +42,9 @@
       background: transparent;
     }
   }
-
-
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: map-get($breakpoints, 'md')) {
   header {
     nav {
       li {
